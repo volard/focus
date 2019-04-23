@@ -30,10 +30,11 @@ const options = {
 }
 
 const greetings = [
-  'Рад тебя видеть',
-  'Привет :D',
-  'Как дела сегодня?',
-  'Здравствуй )'
+  'Hello',
+  'Hi :D',
+  'How are you today?',
+  'Nice to see you )',
+  ' <3 '
 ];
 // =======================
 
@@ -93,12 +94,7 @@ function removeElement(element) {
 
 window.onload = function() {
   document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeEnd', 
-    '<link rel="stylesheet" href="fonts/Comfortaa.css">' +
-    '<link rel="stylesheet" href="fonts/Fira sans.css">' +
-    '<link rel="stylesheet" href="fonts/IBM Plex serif.css">' +
-    '<link rel="stylesheet" href="fonts/IBM Plex.css">' +
-    '<link rel="stylesheet" href="fonts/Montserrat.css">' +
-    '<link rel="stylesheet" href="fonts/Spectral.css">')
+    '<link rel="stylesheet" href="all-fonts.css">')
 }
 
 
@@ -280,20 +276,19 @@ var def_colors = ["#f17713",
   "#f677b6",
   "#92f715"
 ];
-var def_words = ["синий",
-  "желтый",
-  "красный",
-  "черный",
-  "розовый",
-  "фиолетовый",
-  "зеленый",
-  "оранжевый",
-  "голубой",
-  "коричневый",
-  "белый",
-  'малиновый',
-  'очаровательный',
-  'прозрачный'
+var def_words = ["blue",
+  "yellow",
+  "red",
+  "black",
+  "pink",
+  "violet",
+  "green",
+  "orange",
+  "lightblue",
+  "brown",
+  "white",
+  'sublime',
+  'transparent'
 ];
 
 document.getElementsByClassName('js-def-colors')[0].addEventListener('click', function () {

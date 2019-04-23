@@ -8,11 +8,19 @@
 
   
   <!-- META -->
+  <link rel="manifest" href="/manifest.json">
   <meta name="msapplication-TileColor"    content="#cfb7fd">
   <meta name="msapplication-TileImage"    content="/icons/ms-icon-144x144.png">
   <meta name="msapplication-config"       content="/icons/browserconfig.xml">
   <meta name="apple-mobile-web-app-title" content="Blind">
   <meta name="application-name"           content="Blind">
+  <meta name="Description"                content="Blind is application that will make you focused for long time">
+
+  <!--   < Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable"          content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title"            content="Blind">
+  <link rel="apple-touch-icon" href="icons/apple-icon-152x152.png">
   
   <!-- FACEBOOK -->
   <meta property="og:image:height" content="1257">
@@ -23,7 +31,7 @@
   <meta property="og:description"  content="Keep your concentration">
   <meta property="og:url"          content="https://volard.github.io/focus">
   <meta property="og:locale"       content="en_US">
-  <meta property="og:image"        content="https://volard.github.io/focus/facebook/og-image.jpg">
+  <meta property="og:image"        content="https://volard.github.io/focus/build/facebook/og-image.jpg">
  
 
   <!-- TWITTER -->
@@ -31,7 +39,7 @@
   <meta name="twitter:site"        content="Blind app" />
   <meta name="twitter:title"       content="Blind" />
   <meta name="twitter:description" content="Keep your concentration" />
-  <meta name="twitter:url"         content="https://volard.github.io/blind-app/focus/index.html">
+  <meta name="twitter:url"         content="https://volard.github.io/blind-app/focus/build/index.html">
 
 
   <meta itemprop="name"        content="Blind" />
@@ -42,15 +50,15 @@
 
   <!-- ICONS -->
   <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#cfb7fd">
-  <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
-  <link rel="apple-touch-startup-image" />
+  <link rel="apple-touch-startup-image">
   <link rel="shortcut icon" href="icons/favicon.ico">
 
 
   <!-- CSS -->
-  <link async rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link preload rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="color-picker.min.css">
+  <link rel="stylesheet" href="clean_fa.css">
 
 
 </head> 
@@ -150,11 +158,8 @@
     </div>
 
       <div class = 'social'>
-
         <a rel = "noopener noreferrer" href="https://github.com/volard/focus" title = 'Github' class="fab fa-github-alt" target = '_blank'></a>
-
         <a rel = "noopener noreferrer" href="https://vk.com/id382905755" target = '_blank' class="fas fa-at"></a>
-        
       </div>
 
 
@@ -243,10 +248,8 @@
 
 
   <!-- SCRIPTS -->
-  <link async rel="stylesheet" href="libs/picker/color-picker.min.css">
   <script async src="https://usocial.pro/usocial/usocial.js?v=6.1.4" data-script="usocial" charset="utf-8"></script>
-  <script defer src="libs/picker/color-picker.min.js"></script>
-
+  <script defer src="color-picker.min.js"></script>
   <script defer src="index.js"></script>
   
 

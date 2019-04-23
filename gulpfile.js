@@ -16,14 +16,14 @@ const browserSync = require('browser-sync');
 \*------------------------------------*/
 
 gulp.task('on-code-change', async () => {
-  gulp.src(['*.html', '*.js', '*.css'])
+  gulp.src(['src/*.html', 'src/*.js', 'src/*.css'])
       .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('browser-sync', () => {
   browserSync({
     server: {
-      baseDir: './',
+      baseDir: '/src',
     },
     notify: false,
   });
@@ -33,15 +33,14 @@ gulp.task('browser-sync', () => {
   #  BUILD SET
 \*------------------------------------*/
 
-gulp.task('clean-js', async () => {
-  gulp.src('index.js')
+gulp.task('clean-js', async () => { gulp.src('src/index.js')
     .pipe(minify({
       noSource: true,
     }))
     .pipe(gulp.dest('build/'));
 });
 
-gulp.task('clean-css', async () => gulp.src('style.css')
+gulp.task('clean-css', async () => gulp.src('src/style.css')
   .pipe(autoprefixer({
     browsers: [
       "last 1 version",
@@ -52,7 +51,7 @@ gulp.task('clean-css', async () => gulp.src('style.css')
   .pipe(cleanCSS())
   .pipe(gulp.dest('build/')));
 
-gulp.task('clean-html', async () => gulp.src('index.html')
+gulp.task('clean-html', async () => gulp.src('src/index.html')
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build/')));
 
@@ -74,7 +73,7 @@ gulp.task('imagemin', async () => {
 \*------------------------------------*/
 
 gulp.task('watch', () => {
-  gulp.watch(['*.html', '*.js', '*.css'], gulp.parallel('on-code-change'));
+  gulp.watch(['src/*.html', 'src/*.js', 'src/*.css'], gulp.parallel('on-code-change'));
 });
 
 gulp.task('default', gulp.parallel('watch', 'browser-sync'));

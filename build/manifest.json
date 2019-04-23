@@ -51,6 +51,5 @@
   "start_url": "https://volard.github.io/focus/index.html",
   "display": "fullscreen",
   "theme_color": "#2F3BA2",
-  "orientation": "portrait-primary",
   "background_color": "radial-gradient(ellipse at center, rgba(111,124,128,1) 0%, rgba(0,66,66,1) 100%)"
 }
