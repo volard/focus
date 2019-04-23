@@ -41,15 +41,18 @@ gulp.task('clean-js', async () => {
     .pipe(gulp.dest('build/'));
 });
 
-gulp.task('clean-css', async () => gulp.src('./style.css')
+gulp.task('clean-css', async () => gulp.src('style.css')
   .pipe(autoprefixer({
-    browsers: ['last 2 versions'],
+    browsers: [
+      "last 1 version",
+      "> 1%"
+    ],
     cascade: false,
   }))
-  .pipe(cleanCSS({ compatibility: 'ie8' }))
+  .pipe(cleanCSS())
   .pipe(gulp.dest('build/')));
 
-gulp.task('clean-html', async () => gulp.src('./index.html')
+gulp.task('clean-html', async () => gulp.src('index.html')
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build/')));
 
@@ -63,12 +66,7 @@ gulp.task('imagemin', async () => {
     .pipe(gulp.dest('build/'));
 });
 
-gulp.task('build', async () => {
-  gulp.watch('*.html', gulp.parallel('clean-html'));
-  gulp.watch('*.css', gulp.parallel('clean-css'));
-  gulp.watch('*.js', gulp.parallel('clean-js'));
-}
-);
+
 
 
 /* ------------------------------------*\
@@ -80,3 +78,5 @@ gulp.task('watch', () => {
 });
 
 gulp.task('default', gulp.parallel('watch', 'browser-sync'));
+
+gulp.task('build', gulp.parallel('clean-js', 'clean-css', 'clean-html'));
