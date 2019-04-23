@@ -1,8 +1,8 @@
 {
-  "name": "blind",
+  "name": "Blind",
   "version": "1.0.0",
-  "description": "Improve your focus level",
-  "main": "index.js",
+  "description": "Improve your concentration level",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Ha-ha, its test bro\" && exit 1"
   },
