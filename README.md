@@ -1,39 +1,53 @@
+This page also awailable in [Russian](#) language 
+
 ![logo](https://i.ibb.co/fXbyXrH/image.png)
 
 # The web application that will improve your concentration.
 
-## 🔥 Introduction
+## ⚫ Quick start
 
-* On the main screen of the page you can see a color name. 
 * Press ▶ button. 
-* After that you should say aloud color names which paint words.  
-======  
-For example: i see a "blue" word but i'll say "orange" because it is color of this word.  
-  
-  
-## 🔥 Idea  
+* Say aloud color names which paint words.  
 
-It is assumed you'll be focused on colors (not color names) around few minutes every day (almost). In  
+
+
+> For example: i see a "blue" word but i'll say "orange" because it is color of this word.  
+
+----------------
+
+
+## ⚫ Idea  
+
+It is assumed you'll be focused on colors around few minutes every day. In  
 this case the exercise should improve your concentration level and help you to be more focused working on smth...
 
-## 🔥 Main settings  
+> While you exercise, you're using two different areas of the brain
 
-### 🔩  **Colors**  
-  The colors you should say during exercise.  
+--------------------
+
+
+## ⚫ Settings  
+
+* ### Editing colors list
+  The colors you should say during exercising.  
     
-![colors](https://i.ibb.co/Z2KD1TD/colors.png)
+  ![colors](https://i.ibb.co/D9DgqT6/colors.png)
   
-### 🔩 **Words**  
-  The words you'll see during exercise.
+* ### Editing words list 
+  The words you'll see during exercising.
     
-  ![words](https://i.ibb.co/747TBqq/words.png)
+  ![words](https://i.ibb.co/rFM9m3W/words.png)
   
-## 🔥 Theming  
+---------------
+
   
-![theming](https://i.ibb.co/b1GzTqV/theming.gif)  
+## ⚫ Theming  
   
+![theming](https://i.ibb.co/D8gLBJq/Rec202255.gif)  
   
-## 🔥 Customize font  
+--------------------
   
-![font](https://i.ibb.co/SfnKnCF/fonts.gif)
+## ⚫ Changing font settings
+  
+![font](https://i.ibb.co/2Y1RkfR/Rec201533.gif)
   
