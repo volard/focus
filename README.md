@@ -9,32 +9,43 @@ This page also awailable in [Russian](#) language
 * Press ▶ button. 
 * Say aloud color names which paint words.  
 
---------------------
 
-For example: i see a "blue" word but i'll say "orange" because it is color of this word.  
-  
-  
+
+> For example: i see a "blue" word but i'll say "orange" because it is color of this word.  
+
+----------------
+
+
 ## ⚫ Idea  
 
 It is assumed you'll be focused on colors around few minutes every day. In  
 this case the exercise should improve your concentration level and help you to be more focused working on smth...
 
+> While you exercise, you're using two different areas of the brain
+
+--------------------
+
+
 ## ⚫ Settings  
 
-* ### **Editing colors list**  
+* ### Editing colors list
   The colors you should say during exercising.  
     
-![colors](https://i.ibb.co/Z2KD1TD/colors.png)
+  ![colors](https://i.ibb.co/D9DgqT6/colors.png)
   
-* ### **Editing words list**  
+* ### Editing words list 
   The words you'll see during exercising.
     
-  ![words](https://i.ibb.co/747TBqq/words.png)
+  ![words](https://i.ibb.co/rFM9m3W/words.png)
+  
+---------------
+
   
 ## ⚫ Theming  
   
 ![theming](https://i.ibb.co/b1GzTqV/theming.gif)  
   
+--------------------
   
 ## ⚫ Changing font settings
   
