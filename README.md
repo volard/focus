@@ -43,11 +43,11 @@ this case the exercise should improve your concentration level and help you to b
   
 ## ⚫ Theming  
   
-![theming](https://i.ibb.co/b1GzTqV/theming.gif)  
+![theming](https://i.ibb.co/D8gLBJq/Rec202255.gif)  
   
 --------------------
   
 ## ⚫ Changing font settings
   
-![font](https://i.ibb.co/SfnKnCF/fonts.gif)
+![font](https://i.ibb.co/2Y1RkfR/Rec201533.gif)
   
