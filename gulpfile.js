@@ -23,7 +23,7 @@ gulp.task('on-code-change', async () => {
 gulp.task('browser-sync', () => {
   browserSync({
     server: {
-      baseDir: '/src',
+      baseDir: 'src',
     },
     notify: false,
   });

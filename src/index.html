@@ -56,9 +56,9 @@
 
 
   <!-- CSS -->
-  <link preload rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- <link preload rel="stylesheet" href="clean_fa.css"> -->
   <link rel="stylesheet" href="color-picker.min.css">
-  <link rel="stylesheet" href="clean_fa.css">
 
 
 </head> 
@@ -76,14 +76,14 @@
 
       <div class="grid-container-control">
 
-          <label for = 'timeout'>Time</label>
+          <label for = 'timeout' title = 'Minutes'>Time</label>
           <div class = 'custom-number-input'>
             <div class = 'input__time-arrow-left'></div>
             <input id = 'timeout' class = 'duration-input' type="number" step= '0.1' min="1" max="999">
             <div class = 'input__time-arrow-right'></div>
           </div>
 
-          <label for = 'speed'>Speed</label>
+          <label for = 'speed' title = 'Words / minute'>Speed</label>
           <div class = 'custom-number-input'>
             <div class = 'input__time-arrow-left'></div>
             <input id = 'speed' class = 'freq-input' type="number" step = '0.1' min="1" max="999">
@@ -108,8 +108,7 @@
 
           <span>Font</span>
           <div class = 'drop-down-container'>
-            <div class = 'current-font'>Comfortaa
-            <div class = 'arrow-down'></div></div>
+            <div class = 'current-font'>Comfortaa</div>
             
             <ul class = 'drop-menu--fonts'>
               <li>Montserrat Alternates</li> 
@@ -158,8 +157,9 @@
     </div>
 
       <div class = 'social'>
-        <a rel = "noopener noreferrer" href="https://github.com/volard/focus" title = 'Github' class="fab fa-github-alt" target = '_blank'></a>
-        <a rel = "noopener noreferrer" href="https://vk.com/id382905755" target = '_blank' class="fas fa-at"></a>
+        <a title = 'Github' rel = "noopener noreferrer" href="https://github.com/volard/focus" title = 'Github' class="fab fa-github-alt" target = '_blank'></a>
+        <a title = 'Author [VK]' rel = "noopener noreferrer" href="https://vk.com/id382905755" target = '_blank' class="fas fa-at"></a>
+        <a title = 'WTF' href="#" class="far fa-question-circle"></a>
       </div>
 
 
@@ -178,6 +178,7 @@
     <div class="menu--btn"></div>
 
     <div class = 'main-text'>hello</div>
+    <!-- <div class="timer">01:00</div> -->
 
     <div class = 'game-control'>
       <i class="fas fa-undo-alt button-restart"></i>

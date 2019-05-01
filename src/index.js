@@ -1,12 +1,24 @@
 "use strict";
 
 
+
+
+
+
+
+
+
+
+
+
 // =======================
 // definition area
 // =======================
 const addWord = document.getElementsByClassName('word-creator')[0];
 const menu = document.getElementsByClassName('menu')[0];
 const main = document.getElementsByClassName('main')[0];
+const currentFont = document.getElementsByClassName('current-font')[0];
+
 
 
 var isPlaying = false;
@@ -91,11 +103,38 @@ function removeElement(element) {
 // =======================
 
 
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service_worker.js').then(function(registration) {
+            // Регистрация успешна
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+            // Регистрация не успешна
+            console.log('ServiceWorker registration failed: ', err);
+        });
 
-window.onload = function() {
-  document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeEnd', 
-    '<link rel="stylesheet" href="all-fonts.css">')
+        document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeEnd', 
+        '<link rel="stylesheet" href="all-fonts.css">')
+    });
 }
+
+else{
+  window.addEventListener('load', () =>{
+    document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeEnd', 
+    '<link rel="stylesheet" href="all-fonts.css">')
+  });
+}
+
+var registerServiceWorker = function(){
+  navigator.serviceWorker.register('service-worker.js', { scope: './' })
+    .then(navigator.serviceWorker.ready)
+    .then(function () {
+      console.log('service worker registered');
+    })
+    .catch(function (error) {
+      console.error('error when registering service worker', error, arguments)
+    });
+};
 
 
 
@@ -139,7 +178,7 @@ function init() {
     loadBustard(options);
   }
   else{
-    setNoutification(greetings[Math.floor(Math.random() * greetings.length)]);
+    setTimeout(() => { setNoutification(greetings[Math.floor(Math.random() * greetings.length)]); }, 2000);
   }
 
 
@@ -148,6 +187,10 @@ function init() {
     if (key.startsWith('--')){
       document.documentElement.style.setProperty(key, localStorage.getItem(key));
     }
+  }
+
+  if (localStorage.getItem('--main-text--family')) {
+    currentFont.textContent = localStorage.getItem('--main-text--family');
   }
 
   if (localStorage.getItem('colors') !== 'defaults') {
@@ -413,6 +456,7 @@ document.getElementsByClassName('uppercase-checkbox')[0].addEventListener('chang
 document.getElementsByClassName('drop-menu--fonts')[0].addEventListener('click', (ev) => {
   if (ev.target.tagName == 'LI'){
     document.documentElement.style.setProperty('--main-text--family', '"' + ev.target.textContent + '"');
+    currentFont.textContent = '"' + ev.target.textContent + '"';
     localStorage.setItem('--main-text--family', '"' + ev.target.textContent + '"');
   }
 });
