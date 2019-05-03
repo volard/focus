@@ -3,9 +3,16 @@
 
 
 
+// =======================
+// Google analytics
+// =======================
 
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-
+gtag('config', 'UA-135193513-1');
+// =======================
 
 
 
@@ -105,23 +112,21 @@ function removeElement(element) {
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/service_worker.js').then(function(registration) {
-            // Регистрация успешна
+        navigator.serviceWorker.register('../service_worker.js').then(function(registration) {
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
         }).catch(function(err) {
-            // Регистрация не успешна
             console.log('ServiceWorker registration failed: ', err);
         });
 
         document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeEnd', 
-        '<link rel="stylesheet" href="all-fonts.css">')
+        '<link rel="stylesheet" href="../all-fonts.css">')
     });
 }
 
 else{
   window.addEventListener('load', () =>{
     document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeEnd', 
-    '<link rel="stylesheet" href="all-fonts.css">')
+    '<link rel="stylesheet" href="../all-fonts.css">')
   });
 }
 
@@ -516,18 +521,18 @@ function close(){
 const noutification = document.getElementsByClassName('noutification')[0];
 
 function setNoutification(type, pauseVidible = false){
-  if (type === 'пауза'){
+  if (type === 'pause'){
     noutification.textContent = type;
     noutification.classList.toggle('noutification--visible');
   }
 
-  else if (type === 'остановлено'){
+  else if (type === 'stopped'){
     noutification.textContent = type;
     noutification.classList.toggle('noutification--visible');
     setTimeout(() => { noutification.classList.toggle('noutification--visible') }, 2000);
   }
 
-  else if(type === 'старт' || type === 'выполнено'){
+  else if(type === 'started' || type === 'completed'){
     if(pauseVidible){
       noutification.textContent = type;
     }
@@ -562,12 +567,12 @@ var timerId;
 
 document.getElementsByClassName('button-play')[0].addEventListener('click', () => {
   close();
-  setNoutification('старт');
+  setNoutification('started');
   let colors = document.getElementsByClassName('')[0];
     
 
   if (isPlaying){
-    setNoutification('продолжить', true);
+    setNoutification('resume', true);
   }
 
   if (! isPlaying){ 
@@ -585,12 +590,12 @@ document.getElementsByClassName('button-play')[0].addEventListener('click', () =
 
   setTimeout(() => {
     clearInterval(timerId); 
-    setNoutification('выполнено');
+    setNoutification('completed');
   }, timeout);
 });
 
 document.getElementsByClassName('button-pause')[0].addEventListener('click', () => {
-  setNoutification('пауза');
+  setNoutification('paused');
   document.getElementsByClassName('button-play')[0].classList.add('button-play--visible');
   document.getElementsByClassName('button-pause')[0].classList.remove('button-pause--visible');
   timeout -= iterations * speed;
@@ -598,7 +603,7 @@ document.getElementsByClassName('button-pause')[0].addEventListener('click', () 
 });
 
 document.getElementsByClassName('button-restart')[0].addEventListener('click', () => {
-  setNoutification('остановлено');
+  setNoutification('stopped');
   isPlaying = false;
   document.getElementsByClassName('button-play')[0].classList.add('button-play--visible');
   document.getElementsByClassName('button-pause')[0].classList.remove('button-pause--visible');

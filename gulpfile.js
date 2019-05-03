@@ -43,8 +43,7 @@ gulp.task('clean-js', async () => { gulp.src('src/index.js')
 gulp.task('clean-css', async () => gulp.src('src/style.css')
   .pipe(autoprefixer({
     browsers: [
-      "last 1 version",
-      "> 1%"
+      'last 25 versions'
     ],
     cascade: false,
   }))
@@ -52,7 +51,10 @@ gulp.task('clean-css', async () => gulp.src('src/style.css')
   .pipe(gulp.dest('build/')));
 
 gulp.task('clean-html', async () => gulp.src('src/index.html')
-  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(htmlmin({ 
+    collapseWhitespace: true,
+    processConditionalComments: true 
+  }))
   .pipe(gulp.dest('build/')));
 
 gulp.task('imagemin', async () => {

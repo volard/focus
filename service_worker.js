@@ -2,14 +2,12 @@
 var urlsToCache = [
   '/icons/',
   '/facebook/',
-  '/all-fonts.css',
-  '/fa-brands-400.woff2',
-  '/fa-solid-900.woff2',
-  '/index.html',
-  '/manifest.json',
-  '/service_worker.js',
-  '/style.css',
-  '/vendor.css'
+  'all-fonts.css',
+  'fa-brands-400.woff2',
+  'fa-solid-900.woff2',
+  '/build/index.html',
+  '/build/style.css',
+  'vendor.css'
 ];
 
 self.addEventListener('install', function(event) {
