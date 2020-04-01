@@ -200,16 +200,24 @@ label,
 
 
 .current-font:hover + .drop-menu--fonts,
-.drop-menu--fonts:hover {
+.drop-menu--fonts:hover,
+.current-language:hover + .drop-menu--languages,
+.drop-menu--languages:hover {
   opacity: 1;
   cursor: pointer;
   visibility: visible;
   z-index: 1;
 }
 
+.drop-menu--languages a {
+  color: var(--subMenu-textColor);
+  text-decoration: none;
+}
 
 
-.drop-menu--fonts {
+
+.drop-menu--fonts,
+.drop-menu--languages {
   background-color: var(--subMenu-backColor);
   visibility: hidden;
   opacity: 0;
@@ -223,7 +231,8 @@ label,
 }
 
 
-.current-font {
+.current-font,
+.current-language {
   height: 100%;
   display: flex;
   justify-content: flex-start;
@@ -234,14 +243,18 @@ label,
 }
 
 
-.drop-menu--fonts li {
+.drop-menu--fonts li,
+.drop-menu--languages li a,
+.drop-menu--languages li {
   transition: color 0.5s ease-in-out;
   white-space: nowrap;
   margin-bottom: 10px;
 }
 
 
-.drop-menu--fonts li:hover {
+.drop-menu--fonts li:hover,
+.drop-menu--languages li:hover,
+.drop-menu--languages li a:hover {
   color: var(--hover-subMenu-textColor);
 }
 

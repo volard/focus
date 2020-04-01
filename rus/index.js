@@ -455,6 +455,7 @@ document.getElementsByClassName('drop-menu--fonts')[0].addEventListener('click',
     localStorage.setItem('--main-text--family', '"' + ev.target.textContent + '"');
   }
 });
+
 // =======================
 
 
