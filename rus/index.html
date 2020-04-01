@@ -1,99 +1,256 @@
 <!DOCTYPE html>
-<html lang="ru_RU">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport"              content="width=device-width, maximum-scale=2.0, minimum-scale=1.0">
+  <title>Blind app</title>
 
-<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>focus | Keep your concentration</title>
-<meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="focus" />
-<meta property="og:locale" content="ru_RU" />
-<meta name="description" content="Keep your concentration" />
-<meta property="og:description" content="Keep your concentration" />
-<link rel="canonical" href="https://volard.github.io/focus/rus/index.html" />
-<meta property="og:url" content="https://volard.github.io/focus/" />
-<meta property="og:site_name" content="focus" />
-<script type="application/ld+json">
-{"@type":"WebSite","url":"https://volard.github.io/focus/rus/index.html","headline":"focus","name":"focus","description":"Keep your concentration","@context":"http://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+  
+  <!-- META -->
+  <meta name="Keywords" content="концентрация, развитие, фокусировка, улучшение, саморазвитие, продуктивность, скорость, эффективность, бодрствование, focus, focusing, concentration, blind, trainer, training, тренажер, тренировка, внимание, distraction, efficient"> 
+  <link rel="manifest" href="../manifest.json">
+  <meta name="msapplication-TileColor"    content="#cfb7fd">
+  <meta name="msapplication-TileImage"    content="../icons/ms-icon-144x144.png">
+  <meta name="msapplication-config"       content="../icons/browserconfig.xml">
+  <meta name="apple-mobile-web-app-title" content="Blind">
+  <meta name="application-name"           content="Blind">
+  <meta name="Description"                content="Blind is application that will make you focused for long time">
 
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
+  <!--   < Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable"          content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title"            content="Blind">
+  <link rel="apple-touch-icon" href="../icons/apple-icon-152x152.png">
+  
+  <!-- FACEBOOK -->
+  <meta property="og:image:height" content="1257">
+  <meta property="og:image:width"  content="2400">
+  <meta property="og:title"        content="Blind">
+  <meta property="og:image:type"   content="image/jpeg">
+  <meta property="og:type"         content="application" />
+  <meta property="og:description"  content="Keep your concentration">
+  <meta property="og:url"          content="https://volard.github.io/focus/build">
+  <meta property="og:locale"       content="en_US">
+  <meta property="og:image"        content="https://volard.github.io/focus/facebook/og-image.jpg">
+ 
+
+  <!-- TWITTER -->
+  <meta name="twitter:card"        content="app"></meta>
+  <meta name="twitter:site"        content="Blind app" />
+  <meta name="twitter:title"       content="Blind" />
+  <meta name="twitter:description" content="Keep your concentration" />
+  <meta name="twitter:url"         content="https://volard.github.io/blind-app/focus/build/index.html">
+
+
+  <meta itemprop="name"        content="Blind" />
+  <meta itemprop="description" content="Keep your concentration" />
+  <meta itemprop="image"       content="facebook/og-image.jpg" />
+  <meta name='theme-color'     content='#9CC2CE'>
+
+
+  <!-- ICONS -->
+  <link rel="mask-icon" href="../icons/safari-pinned-tab.svg" color="#cfb7fd">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="apple-touch-startup-image">
+  <link rel="shortcut icon" href="../icons/favicon.ico">
+
+
+  <!-- CSS -->
+  <link preload rel="stylesheet" href="../build/style.css">
+  <link rel="stylesheet" href="../vendor.css">
+
+</head> 
+<body> 
+  <aside class = 'menu'>
+    <div id = 'top'>
+      <h1>Настройки</h1>   
+      <div class = 'close_btn'></div>
+    </div>
+
+
+    <div class = 'section'>
+      <hr><h3>Главное</h3>
+    </div>
+
+      <div class="grid-container-control">
+
+          <label for = 'timeout' title = 'Minutes'>Время</label>
+          <div class = 'custom-number-input'>
+            <div class = 'input__time-arrow-left'></div>
+            <input id = 'timeout' class = 'duration-input' type="number" step= '0.1' min="1" max="999">
+            <div class = 'input__time-arrow-right'></div>
+          </div>
+
+          <label for = 'speed' title = 'Words / minute'>Скорость</label>
+          <div class = 'custom-number-input'>
+            <div class = 'input__time-arrow-left'></div>
+            <input id = 'speed' class = 'freq-input' type="number" step = '0.1' min="1" max="999">
+            <div class = 'input__time-arrow-right'></div>
+          </div>
+
+          <label for = 'size'>Размер текста</label>
+          <input class = 'size-range' id = 'size' type="range" max='150' min='25' value='50' step = '1'>
+
+          <label for = 'bold'>Толщина</label>
+          <input class = 'bold-range' id = 'bold' type="range" max = '900' min = '100' step = '100' value="400">
+
+          <label for = 'italic'>Курсив</label>
+          <input class = 'italic-checkbox' id = 'italic' type="checkbox">
+
+          <label for = 'uppercase'>Регистр</label>
+          <input class = 'uppercase-checkbox' id = 'uppercase' type="checkbox">
+
+          <label>Фон</label>
+          <div class="colorpicker-opener"></div>
+
+
+          <span>Шрифт</span>
+          <div class = 'drop-down-container'>
+            <div class = 'current-font'>Comfortaa</div>
+            
+            <ul class = 'drop-menu--fonts'>
+              <li>Montserrat Alternates</li> 
+              <li>Fira Sans</li>
+              <li>Open Sans</li>
+              <li>IBM Plex Mono</li>
+              <li>Spectral SC</li>
+              <li>IBM Plex Serif</li>
+              <li>Comfortaa</li>
+            </ul>
+          </div>
+
+          <span>Слова</span>
+          <div class = 'words-btn button' data = 'popup__words'>Показать</div>
+
+          <span>Цвета</span>
+          <div class = 'colors-btn button' data = 'popup__colors'>Показать</div>
+      </div>
+
+
+    <div class = 'section'>
+      <hr><h3>Тема</h3>
+    </div>
+
+      <div class="grid-container-theme">
+        <span>Основной цвет</span>
+        <div class="color-selection-primary">
+          <div class = 'primary-color-option' color-data = 'dark'></div>
+          <div class = 'primary-color-option' color-data = 'light'></div>
+        </div>
+
+        <span>Акцент</span>
+        <div class="color-selection-accent">
+          <div class = 'secondary-color-option' color-data = '#C1392B'></div>
+          <div class = 'secondary-color-option' color-data = '#DDDDDD'></div>
+          <div class = 'secondary-color-option' color-data = '#F39C11'></div> 
+          <div class = 'secondary-color-option' color-data = '#DCD427'></div>  
+          <div class = 'secondary-color-option' color-data = '#087099'></div>
+          <div class = 'secondary-color-option' color-data = '#2D2E31'></div>
+        </div>
+      </div>
+
+
+    <div class = 'section'>
+      <hr><h3>Информация</h3>
+    </div>
+
+      <div class = 'social'>
+        <a title = 'Github' rel = "noopener noreferrer" href="https://github.com/volard/focus" title = 'Github' class="fab fa-github-alt" target = '_blank'></a>
+        <a title = 'Author [VK]' rel = "noopener noreferrer" href="https://vk.com/id382905755" target = '_blank' class="fas fa-at"></a>
+        <a title = 'WTF' href="https://volard.github.io/focus/" class="far fa-question-circle"></a>
+      </div>
+
+
+    <div class = 'section'>
+      <hr>
+      <h3>Поделиться</h3>
+    </div>
+    
+    <div class="uSocial-Share" data-pid="8d5ece1b2d82b5a262dd2b4bd23b87fa" data-type="share" data-options="round-rect,style4,default,absolute,horizontal,size48,eachCounter0,counter0,nomobile" data-social="vk,twi,telegram,fb"></div>
+
+  </aside>
+
+
+  <main class = 'main'>
+
+    <div class="menu--btn"></div>
+
+    <div class = 'main-text'>Привет</div>
+    <!-- <div class="timer">01:00</div> -->
+
+    <div class = 'game-control'>
+      <i class="fas fa-undo-alt button-restart"></i>
+      <i class="fas fa-pause button-pause"></i>
+      <i class="fas fa-play button-play--visible button-play"></i>
+    </div>
+
+  </main>
+
+
+  <div class = 'noutification'></div>
+
+
+  <div class="popup-fallback"></div>
+
+  <div class = 'popup__colors popup'>
+    <div class = 'popup__control'>
+      <div class = 'close_btn'></div>
+      <div class = 'popup__header'>Цвета</div>
+      <div class = 'color-default-button js-def-colors'>К стандартным</div>
+      <div class = 'popup__colorpicker-opener'></div>
+
+      <div class = 'colors-queue tuning-area'>
+        <div class = 'opt-color opt-js' style = 'background-color: yellow'></div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class = 'popup__words popup'>
+    <div class = 'popup__control'>
+      <div class = 'close_btn'></div>
+      <div class = 'popup__header'>Слова</div>
+      <div class = 'color-default-button js-def-words'>К стандартным</div>
       
-      <h1><a href="https://volard.github.io/focus/src">Blind</a></h1>
-      
+      <label for="name" class="contact__container">
+        <input maxlength="40" class = 'contact__input' type="text" id="name" placeholder="New word">
+          <span class="contact__border"></span>
+      </label>
 
-      <p>This page also available in <a href="https://volard.github.io/focus/eng/">English</a> language</p>
-
-<p><a href="https://volard.github.io/focus/src"></a><img src="https://i.ibb.co/fXbyXrH/image.png" alt="logo" /></p>
-
-<h1 id="the-web-application-that-will-improve-your-concentration">Веб приложение, которое улучшит Вашу концентрацию</h1>
-
-<h2 id="-quick-start">⚫ Начало</h2>
-
-<ul>
-  <li>Нажмите ▶</li>
-  <li>Проговаривайте вслух цвета, которыми написаны слова</li>
-</ul>
-
-<blockquote>
-  <p>Допустим, я вижу "синий". Несмотря на это я скажу "оранжевый", потому что этим цветом написано данное слово.</p>
-</blockquote>
-
-<hr />
-
-<h2 id="-idea">⚫ Концепция</h2>
-
-<p>Предполагается, что Вы будете выполнять упражнение по несколько минут ежедневно.
-Тогда этот тренажер поможет повысить уровень концентрации и улучшить способность фокусироваться на чем - либо.</p>
-
-<blockquote>
-  <p>Во время выполнения задания, Вы одновременно задействуете разные области мозга и, тем самым, повышаете устойчивость к отвлекающим факторам.</p>
-</blockquote>
-
-<hr />
-
-<h2 id="-settings">⚫ Настройки</h2>
-
-<ul>
-  <li>
-    <h3 id="editing-colors-list">Изменение списка отображаемых цветов</h3>
-
-    <p><img src="https://i.ibb.co/D9DgqT6/colors.png" alt="colors" /></p>
-  </li>
-  <li>
-    <h3 id="editing-words-list">Изменение списка отображаемых слов</h3>
-
-    <p><img src="https://i.ibb.co/rFM9m3W/words.png" alt="words" /></p>
-  </li>
-  <li>
-    <h3 id="editing-time">Поле "Time" рассчитывает длительность упражнения в минутах</h3>
-  </li>
-  <li>
-    <h3 id="editing-speed">Поле "Speed" рассчитывает количество отображаемых слов в минуту</h3>
-  </li>
-</ul>
-
-<hr />
-
-<h2 id="-theming">⚫ Изменение цветовой схемы</h2>
-
-<p><img src="https://i.ibb.co/D8gLBJq/Rec202255.gif" alt="theming" /></p>
-
-<hr />
-
-<h2 id="-changing-font-settings">⚫ Изменение шрифта</h2>
-
-<p><img src="https://i.ibb.co/2Y1RkfR/Rec201533.gif" alt="font" /></p>
-
+      <div class = 'words-queue tuning-area'>
+        <div class = 'opt-word opt-js'>Привет</div>
+      </div>
       
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
-    
-  </body>
+  </div>
+
+
+
+  <div class = 'popup__words popup'>
+    <h1>Слова</h1>
+    <div class = 'close_btn'></div>
+      
+    <div class = 'words-queue tuning-area'>
+      
+    </div>
+
+    <div class = 'popup__footer'>
+      <a class = 'words-default-button'>К стандартным</a>
+      <div class="word-creator"></div>
+    </div>
+
+
+  </div>
+
+
+
+  <!-- SCRIPTS -->
+  <script async src="https://usocial.pro/usocial/usocial.js?v=6.1.4" data-script="usocial" charset="utf-8"></script>
+  <script defer src="../color-picker.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135193513-1"></script>
+  <script defer src="index.js"></script>
+</body>
 </html>

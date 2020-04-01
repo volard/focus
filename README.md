@@ -1,4 +1,4 @@
-This page also awailable in [Russian](https://volard.github.io/focus/rus/index.html) language 
+This page also awailable in [Russian](https://volard.github.io/focus/docs/rus/index.html) language 
 
 ![logo](https://i.ibb.co/fXbyXrH/image.png)
 
