@@ -22,7 +22,7 @@ In
 this case the service will help you to increase the level of concentration and improve the ability to focus on something.
 
 
-> While you exercise, you're using different areas of the braing at the same time. By that, you increase resistance to distraction factors
+> While you exercise, you're using different areas of the brain at the same time. By that, you increase resistance to distraction factors
 
 --------------------
 
